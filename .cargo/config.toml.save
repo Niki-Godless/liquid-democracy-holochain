@@ -1,0 +1,13 @@
+```
+
+Press Enter after each line.
+
+**Type this:**
+```
+[target.wasm32-unknown-unknown]
+rustflags = [
+    "--cfg", "getrandom_backend=\"custom\""
+][target.wasm32-unknown-unknown]
+rustflags = [
+    "--cfg", "getrandom_backend=\"custom\""
+]

@@ -1,0 +1,15 @@
+---
+manifest_version: "0"
+name: val_democracy
+integrity:
+  network_seed: ~
+  properties: ~
+  zomes:
+    - name: val_democracy_integrity
+      path: ../../target/wasm32-unknown-unknown/release/val_democracy_integrity.wasm
+coordinator:
+  zomes:
+    - name: val_democracy_coordinator
+      path: ../../target/wasm32-unknown-unknown/release/val_democracy_coordinator.wasm
+      dependencies:
+        - name: val_democracy_integrity

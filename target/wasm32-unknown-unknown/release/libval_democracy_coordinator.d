@@ -1,0 +1,1 @@
+/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/libval_democracy_coordinator.rlib: /home/uporabnik/val-democracy-happ/dnas/val_democracy/zomes/coordinator/src/lib.rs /home/uporabnik/val-democracy-happ/dnas/val_democracy/zomes/integrity/src/lib.rs

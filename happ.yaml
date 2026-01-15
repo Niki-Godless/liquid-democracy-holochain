@@ -1,0 +1,14 @@
+---
+manifest_version: "0"
+name: val_democracy
+description: "Liquid democracy with 7 domains and invitation-based growth"
+roles:
+  - name: val_democracy
+    provisioning:
+      strategy: create
+      deferred: false
+    dna:
+      path: dnas/val_democracy/val_democracy.dna
+      modifiers:
+        network_seed: ~
+        properties: ~

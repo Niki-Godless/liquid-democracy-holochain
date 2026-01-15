@@ -1,0 +1,14 @@
+/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/deps/thiserror-0b299ba5859755ab.d: /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/lib.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/aserror.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/display.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/var.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/private.rs /home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/build/thiserror-41b7b5cfcc39d2ea/out/private.rs
+
+/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/deps/libthiserror-0b299ba5859755ab.rlib: /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/lib.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/aserror.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/display.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/var.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/private.rs /home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/build/thiserror-41b7b5cfcc39d2ea/out/private.rs
+
+/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/deps/libthiserror-0b299ba5859755ab.rmeta: /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/lib.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/aserror.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/display.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/var.rs /home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/private.rs /home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/build/thiserror-41b7b5cfcc39d2ea/out/private.rs
+
+/home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/lib.rs:
+/home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/aserror.rs:
+/home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/display.rs:
+/home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/var.rs:
+/home/uporabnik/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.17/src/private.rs:
+/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/build/thiserror-41b7b5cfcc39d2ea/out/private.rs:
+
+# env-dep:OUT_DIR=/home/uporabnik/val-democracy-happ/target/wasm32-unknown-unknown/release/build/thiserror-41b7b5cfcc39d2ea/out
