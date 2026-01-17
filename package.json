@@ -1,0 +1,26 @@
+{
+  "name": "val-democracy-happ",
+  "version": "1.0.0",
+  "description": "A peer-to-peer liquid democracy platform where you can delegate votes or vote directly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Niki-Godless/liquid-democracy-holochain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Niki-Godless/liquid-democracy-holochain/issues"
+  },
+  "homepage": "https://github.com/Niki-Godless/liquid-democracy-holochain#readme",
+  "dependencies": {
+    "@holochain/client": "^0.20.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

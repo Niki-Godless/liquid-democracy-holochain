@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Liquid Democracy</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 50px auto; padding: 20px; }
+        .debug { background: #f0f0f0; padding: 15px; margin: 20px 0; font-family: monospace; font-size: 12px; white-space: pre-wrap; overflow-x: auto; max-height: 400px; }
+        input, textarea, select { width: 100%; padding: 8px; margin: 5px 0; box-sizing: border-box; }
+        textarea { min-height: 80px; }
+        button { padding: 10px 20px; margin: 10px 0; cursor: pointer; background: #FF6B35; color: white; border: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🗳️ Liquid Democracy</h1>
+    <div class="debug" id="debug">Initializing...</div>
+    
+    <h2>Create Proposal</h2>
+    <input type="text" id="title" placeholder="Proposal Title" value="Clean Air Initiative">
+    <textarea id="description" placeholder="Description">Improve air quality standards</textarea>
+    <select id="domain">
+        <option value="Air" selected>Air</option>
+        <option value="Water">Water</option>
+        <option value="Food">Food</option>
+        <option value="Infrastructure">Infrastructure</option>
+        <option value="Health">Health</option>
+        <option value="Education">Education</option>
+        <option value="Cooperation">Cooperation</option>
+    </select>
+    <button onclick="createProposal()">Create Proposal</button>
+
+    <script type="module">
+        import { AdminWebsocket } from 'https://cdn.jsdelivr.net/npm/@holochain/client@0.16.8/+esm';
+
+        let client;
+        const debug = document.getElementById('debug');
+        
+        // Hardcoded cell_id from your terminal output
+        const cellId = [
+            'uhC0ky9dqwh-WXTtHi5l3lvvwnGjPzHezcpQV1Hg5CvVMDsHAvo9U',
+            'uhCAkEphJwJGg5HS7S2zu06SkQt-X13YY5pHmDCWfwYSdC7eDhdk8'
+        ];
+
+        async function init() {
+            try {
+                debug.textContent = 'Connecting to admin interface (port 39983)...';
+                client = await AdminWebsocket.connect('ws://localhost:39983');
+                debug.textContent += '\n✓ Connected!';
+                debug.textContent += '\n✅ Using known cell_id from val_democracy app';
+                debug.textContent += '\n\nReady to create proposals!';
+                
+            } catch (error) {
+                debug.textContent += '\n✗ Error: ' + error.message;
+            }
+        }
+
+        window.createProposal = async function() {
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const domain = document.getElementById('domain').value;
+            
+            try {
+                debug.textContent += '\n\n🚀 Creating proposal: "' + title + '" in ' + domain + '...';
+                
+                const result = await client.callZome({
+                    cell_id: cellId,
+                    zome_name: 'liquid_democracy',
+                    fn_name: 'create_proposal',
+                    payload: {
+                        title: title,
+                        description: description,
+                        domain: domain
+                    },
+                    provenance: cellId[1]
+                });
+                
+                debug.textContent += '\n\n🎉 SUCCESS!';
+                debug.textContent += '\nProposal created!';
+                debug.textContent += '\nHash: ' + JSON.stringify(result);
+                
+                alert('✅ Proposal created successfully!');
+                
+                document.getElementById('title').value = '';
+                document.getElementById('description').value = '';
+                
+            } catch (error) {
+                debug.textContent += '\n\n❌ ERROR: ' + error.message;
+                debug.textContent += '\nFull error: ' + JSON.stringify(error, Object.getOwnPropertyNames(error), 2);
+                alert('Failed: ' + error.message);
+                console.error(error);
+            }
+        };
+
+        init();
+    </script>
+</body>
+</html>
